@@ -1,0 +1,11 @@
+{
+   "firstName": "Eduardo",
+   "lastName": "Eduardo Bagus Prima Julian",
+   "gender": "male",
+   "age": 19,
+   "address": {
+       "streetAddress": "Adipala",
+       "city": "Cilacap",
+       "state": "Central Java"
+   }
+}

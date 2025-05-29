@@ -1,25 +1,20 @@
-import { readFile } from 'fs/promises';
+import fs from 'fs';
 
-function readJSON() {
-    readFile('jurnal7_3_2311104013.json', 'utf8')
-        .then(data => {
-            const obj = JSON.parse(data);
-            const entry = obj.glossary.GlossDiv.GlossList.GlossEntry;
+class TeamMembers2311104025 {
+  static ReadJSON() {
+    const rawData = fs.readFileSync('jurnal7_1_2311104025.json');
+    const data = JSON.parse(rawData);
 
-            console.log("===== GLOSSARY ENTRY =====");
-            console.log(`ID        : ${entry.ID}`);
-            console.log(`SortAs    : ${entry.SortAs}`);
-            console.log(`Term      : ${entry.GlossTerm}`);
-            console.log(`Acronym   : ${entry.Acronym}`);
-            console.log(`Abbrev    : ${entry.Abbrev}`);
-            console.log(`Definition: ${entry.GlossDef.para}`);
-            console.log(`See Also  : ${entry.GlossDef.GlossSeeAlso.join(", ")}`);
-            console.log(`GlossSee  : ${entry.GlossSee}`);
-            console.log("===========================");
-        })
-        .catch(err => {
-            console.error("Gagal membaca atau parsing file:", err);
-        });
+    console.log(`Name: ${data.firstName} ${data.lastName} (${data.age}, ${data.gender})`);
+    const address = data.address;
+    console.log(`Address: ${address.streetAddress}, ${address.city}, ${address.state}`);
+
+    console.log('Courses:');
+    data.courses.forEach(course => {
+      console.log(`- ${course.code}: ${course.name}`);
+    });
+  }
 }
 
-readJSON();
+
+TeamMembers2311104025.ReadJSON();

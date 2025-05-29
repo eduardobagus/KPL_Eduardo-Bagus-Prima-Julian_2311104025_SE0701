@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 function readJSON() {
-    fs.readFile('tp7_2_2311104013.json', 'utf8', (err, data) => {
+    fs.readFile('tp7_2_2311104025.json', 'utf8', (err, data) => {
         if (err) {
             console.error("Gagal membaca file:", err);
             return;

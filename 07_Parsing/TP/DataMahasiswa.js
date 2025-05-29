@@ -2,7 +2,7 @@ const fs = require('fs');
 
 class DataMahasiswa1234567890 {
     static ReadJSON() {
-        fs.readFile('tp7_1_2311104013.json', 'utf8', (err, data) => {
+        fs.readFile('tp7_1_2311104025.json', 'utf8', (err, data) => {
             if (err) {
                 console.error("Gagal membaca file:", err);
                 return;

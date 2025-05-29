@@ -2,7 +2,7 @@ import fs from 'fs';
 
 class GlossaryItem2311104025 {
   static ReadJSON() {
-    const rawData = fs.readFileSync('jurnal7_3_2311104023.json');
+    const rawData = fs.readFileSync('jurnal7_3_2311104025.json');
     const data = JSON.parse(rawData);
 
     const entry = data.glossary.GlossDiv.GlossList.GlossEntry;
@@ -18,4 +18,4 @@ class GlossaryItem2311104025 {
   }
 }
 
-GlossaryItem2311104023.ReadJSON();
+GlossaryItem2311104025.ReadJSON();
